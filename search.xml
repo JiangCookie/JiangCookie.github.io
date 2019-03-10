@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>数据库外键关联，删除外键约束</title>
+      <link href="/2019/03/10/shu-ju-ku-wai-jian-guan-lian-shan-chu-wai-jian-yue-shu/"/>
+      <url>/2019/03/10/shu-ju-ku-wai-jian-guan-lian-shan-chu-wai-jian-yue-shu/</url>
+      
+        <content type="html"><![CDATA[<p>通常情况下，在MySQL中删除一张表或一条数据的时候会出现</p><p>[Err] 1451 -Cannot delete or update a parent row: a foreign key constraint fails (…)</p><p>这是因为MySQL中设置了foreign key关联，造成无法更新或删除数据。可以通过设置FOREIGN_KEY_CHECKS变量来避免这种情况。</p><p>解决办法：</p><ol><li><code>SET FOREIGN_KEY_CHECKS=0;</code>·   来禁用外键约束.</li><li><code>SET FOREIGN_KEY_CHECKS=1;</code>   来启动外键约束</li></ol><p>查看当前FOREIGN_KEY_CHECKS的值可用如下命令<br><code>SELECT  @@FOREIGN_KEY_CHECKS;</code></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据库 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据库 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>redis (3) 一致性哈希</title>
       <link href="/2018/11/23/redis-3-yi-zhi-xing-ha-xi/"/>
       <url>/2018/11/23/redis-3-yi-zhi-xing-ha-xi/</url>
